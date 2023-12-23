@@ -25,7 +25,7 @@ import {Badge} from "./component/styledComponent/Badge";
 import {Button} from "./component/styledComponent/Button";
 import {Footer} from "./component/Footer";
 import {Price} from "./component/Price";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {SideBar} from "./component/sideBar";
 import {CardGood} from "./component/Card";
 
@@ -35,6 +35,14 @@ function App() {
   const toggleOpenSideBar = () => {
     setOpenSideBar(!isOpenSideBar);
   }
+
+  useEffect(() => {
+    if (isOpenSideBar) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isOpenSideBar]);
 
   return (
     <div className="App">

@@ -1,0 +1,3 @@
+const caramell
+
+const goods = [];

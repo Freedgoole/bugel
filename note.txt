@@ -1,0 +1,14 @@
+Conponents
+- context state (bar)
+- popup
+- basket bar
+- Card
+-- footer bottom
+
+-- filter
+-- - text section blog
+
+--alt for img
+
+
+Big Photos

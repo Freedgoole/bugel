@@ -28,7 +28,7 @@ export const SectionDescription = styled.p`
 export const TitleL = styled.p`
   font-family: NespressoLucasBold;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 14px;
   color: ${(props) => props?.color || "#171A20"};
   letter-spacing: 1.5px;
   margin: 0;

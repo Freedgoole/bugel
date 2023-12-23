@@ -4,14 +4,15 @@ import styled from 'styled-components';
 const PriceWrapper = styled.div`
   display: flex;
   gap: 4px;
- color: #3d8705;
- font-size: 18px;
- font-family: NespressoLucasBold;
+  color: #3d8705;
+  font-size: 24px;
+  font-family: NespressoLucasBold;
+  align-items: center;
 `;
 
 const PriceText = styled(PriceWrapper)`
  font-family: NespressoLucasRegular;
- font-size: 16px;
+ font-size: 18px;
 `;
 
 const PriceComponent = ({price}) => {

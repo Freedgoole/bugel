@@ -45,23 +45,23 @@ const CardContainer = styled.div`
 `
 
 const ExstraInformation = styled(TitleXS)`
-  margin: 4px 0;
+  margin-bottom: 12px;
 `
 const BorderBlock = styled.span`
   border-top: 1px solid black;
   width: 50%;
-  margin: 8px 0;
+  margin: 4px 0;
 `
 
 const CardDescription = styled(Description)`
-  margin: 12px 0;
+  margin: 10px 0;
   flex: 1;
 `
 
 const CoffeParamsContainer = styled(FlexContainerCentred)`
   width: 100%;
   gap: 4px;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 `
 
 const NotesContainer = styled.div`
@@ -69,6 +69,12 @@ const NotesContainer = styled.div`
   top: 10px;
   right: 10px;
 `
+
+// const CardContainer = styled.div`
+//   position: absolute;
+//   top: 10px;
+//   right: 10px;
+// `
 
 const ImgComponent = () => {
     return (

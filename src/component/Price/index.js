@@ -3,22 +3,23 @@ import styled from 'styled-components';
 
 const PriceWrapper = styled.div`
   display: flex;
-  gap: 4px;
+  gap: 0px;
   color: #3d8705;
-  font-size: 24px;
+  font-size: 20px;
   font-family: NespressoLucasBold;
   align-items: center;
+  margin-top: 4px;
 `;
 
 const PriceText = styled(PriceWrapper)`
  font-family: NespressoLucasRegular;
- font-size: 18px;
+ font-size: 14px;
 `;
 
 const PriceComponent = ({price}) => {
     return (
         <PriceWrapper>
-            {price} <PriceText>грн</PriceText>
+            {price}<PriceText>грн</PriceText>
         </PriceWrapper>
     )
 };

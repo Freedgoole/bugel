@@ -45,7 +45,10 @@ const CardContainer = styled.div`
 `
 
 const ExstraInformation = styled(TitleXS)`
-  margin-bottom: 12px;
+  font-family: NespressoLucasRegular;
+  margin-bottom: 16px;
+  text-transform: lowercase;
+  font-size: 10px;
 `
 const BorderBlock = styled.span`
   border-top: 1px solid black;
@@ -54,7 +57,7 @@ const BorderBlock = styled.span`
 `
 
 const CardDescription = styled(Description)`
-  margin: 10px 0;
+  margin: 8px 0;
   flex: 1;
 `
 

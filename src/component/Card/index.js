@@ -24,17 +24,7 @@ const CardContainer = styled.div`
     align-items: center;
     flex-direction: column;
     box-sizing: border-box;
-  //grid-template-areas: 
-  //      "img"
-  //      "title"
-  //      "border"
-  //      "subTitle"
-  //      "description"
-  //      "params"
-  //      "price"
-  //      "exstra"
-  //      "button";
-  
+
     @media (max-width: 767px) {
       grid-template-columns: 1fr;
     }
@@ -60,6 +50,10 @@ const CardDescription = styled(Description)`
   margin: 12px 0;
   flex: 1;
   width: 90%;
+  min-height: 32px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 `
 
 const CoffeParamsContainer = styled(FlexContainerCentred)`

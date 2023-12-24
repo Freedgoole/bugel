@@ -19,18 +19,27 @@ const CardContainer = styled.div`
     padding: 8px 16px 24px;
     box-sizing: border-box;
     box-shadow: 0 0 8px #17171a0d, 0 2px 8px #17171a14;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    justify-items: center;
     align-items: center;
     flex-direction: column;
     box-sizing: border-box;
+  //grid-template-areas: 
+  //      "img"
+  //      "title"
+  //      "border"
+  //      "subTitle"
+  //      "description"
+  //      "params"
+  //      "price"
+  //      "exstra"
+  //      "button";
   
     @media (max-width: 767px) {
       grid-template-columns: 1fr;
     }
 
     @media (max-width: 450px) {
-      max-width:265px;  
       width: 90%;
    }
 `
@@ -46,6 +55,7 @@ const BorderBlock = styled.span`
 
 const CardDescription = styled(Description)`
   margin: 12px 0;
+  flex: 1;
 `
 
 const CoffeParamsContainer = styled(FlexContainerCentred)`

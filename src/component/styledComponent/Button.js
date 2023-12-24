@@ -7,13 +7,13 @@ export const Button = styled.button`
   text-transform: uppercase;
   background: ${props => props?.type ? "transparent": '#3d8705'};
   color: ${props => props?.type ? "black": 'white'};
-  padding: .7rem 1.5rem;
+  padding: .8rem 1.9rem;
   width: auto;
   display: flex;
   align-items: center;
   border-radius: 12px;
   cursor: pointer;
-  max-width: 185px;
+  max-width: 190px;
   border: ${props => props?.type ? "1px solid black": '1px solid transparent'};
   
   &:hover {

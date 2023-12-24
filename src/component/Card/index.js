@@ -15,7 +15,7 @@ import {Button} from "../styledComponent/Button";
 
 const CardContainer = styled.div`
     position: relative;
-    min-width: 265px;
+    width: 265px;
     padding: 8px 16px 24px;
     box-sizing: border-box;
     box-shadow: 0 0 8px #17171a0d, 0 2px 8px #17171a14;
@@ -52,13 +52,14 @@ const ExstraInformation = styled(TitleXS)`
 `
 const BorderBlock = styled.span`
   border-top: 1px solid black;
-  width: 50%;
-  margin: 4px 0;
+  width: 40%;
+  margin: 6px 0;
 `
 
 const CardDescription = styled(Description)`
   margin: 12px 0;
   flex: 1;
+  width: 90%;
 `
 
 const CoffeParamsContainer = styled(FlexContainerCentred)`

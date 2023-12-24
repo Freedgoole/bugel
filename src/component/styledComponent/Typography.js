@@ -44,6 +44,11 @@ export const TitleS = styled(TitleL)`
   letter-spacing: 0.8px;
 `;
 
+export const TitleXS = styled(TitleL)`
+  font-size: 8px;
+  letter-spacing: 0.4px;
+`;
+
 export const Description = styled.p`
   font-family: NespressoLucasMed;
   font-size: 14px;

@@ -16,7 +16,7 @@ import {
   SectionTitle,
   TitleL,
   TitleM,
-  TitleS
+  TitleS, TitleXS
 } from "./component/styledComponent/Typography";
 import {Rating} from "./component/Rating";
 import {intensity, translate} from "./catalog/intensity";
@@ -54,6 +54,26 @@ function App() {
               <Label information={note} isShort/>
           ))}
           </div>
+        <div style={{width: '100%', display: 'flex', gap: "12px", flexWrap: "wrap", justifyContent: "start", marginTop: '24px'}}>
+          <CentralContainer>
+            <GoodsContainer>
+              <CardGood>
+                <Label information={notes.smoky} isShort/>
+                <Img src={CapsulePreview['buenosAires']} />
+                <TitleL>{nameUkraine['buenosAires']}</TitleL>
+                <TitleM>{nameOrigin['buenosAires']}</TitleM>
+                <Description>{shortDescription['buenosAires']}</Description>
+                <FlexContainerCentred>
+                  <TitleS color="#876c43">{translate['intensity']}</TitleS>
+                  <Rating rate={intensity['buenosAires'].intensity}/>
+                </FlexContainerCentred>
+                <Price price='320'/>
+                <TitleXS>1 упаковка (10 капсул)*</TitleXS>
+                <Button>Додати у корзину</Button>
+              </CardGood>
+            </GoodsContainer>
+          </CentralContainer>
+        </div>
         <div style={{width: '100%', display: 'flex', gap: "12px", flexWrap: "wrap", justifyContent: "start", marginTop: '24px'}}>
           <CentralContainer>
             <GoodsContainer>

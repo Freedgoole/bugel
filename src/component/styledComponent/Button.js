@@ -13,6 +13,7 @@ export const Button = styled.button`
   align-items: center;
   border-radius: 12px;
   cursor: pointer;
+  max-width: 185px;
   border: ${props => props?.type ? "1px solid black": '1px solid transparent'};
   
   &:hover {

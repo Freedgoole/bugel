@@ -16,7 +16,7 @@ const Loader = styled.div`
   animation-iteration-count: infinite;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 35%;
   transform: translate(-50%, -50%);
 `;
 
@@ -29,7 +29,7 @@ const ImgComponent = ({src, alt}) => {
 
     const preparedSrc = `images/original/${src}`
     return (
-        <div style={{width: 160, height: 160}}>
+        <div style={{width: 160, height: 160, position: 'relative'}}>
             {!isLoad && <Loader />}
             <img src={preparedSrc} alt={alt} width={160} onLoad={handleLoad} />
         </div>

@@ -10,7 +10,7 @@ export const shortDescription = {
     rioDeJaneiroEspresso: 'ріо-де-жанейрський еспресо',
     capriccio: 'багатий і характерний',
     caramello: 'ніжний та карамельний',
-    chiaro: 'світлий',
+    chiaro: 'для солодких та ніжних рецептів з молоком',
     cioccolatino: 'ніжний та шоколадний',
     colombia: 'фруктовий та жвавий',
     corto: 'пряний та обсмажений',

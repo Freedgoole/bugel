@@ -1,3 +1,27 @@
-const caramell
-
-const goods = [];
+export const goods = [
+    "buenosAires",
+    "shanghaiLungo",
+    "viennaLungo",
+    "tokyoVivaltoLungo",
+    "stockholmLungo",
+    "capetownEnvivoLungo",
+    "parisEspresso",
+    "istanbulEspresso",
+    "rioDeJaneiroEspresso",
+    "nocciola",
+    "caramello",
+    "chiaro",
+    "cioccolatino",
+    "corto",
+    "vaniglia",
+    "scuro",
+    "colombia",
+    "capriccio",
+    "cosi",
+    "ethiopia",
+    "indonesia",
+    "peruOrganic",
+    "nicaragua",
+    "frostedCaramelNuts",
+    "seasonalDelightSpices"
+];

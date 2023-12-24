@@ -172,6 +172,13 @@ const seasonalDelightSpices = {
     roastiness: 2,
 };
 
+const tokyoVivaltoLungo = {
+    intensity: 2,
+    bitterness: 2,
+    acidity: 3,
+    roastiness: 2,
+}
+
 export const translate = {
     intensity: 'насиченість',
     bitterness: 'гіркота',
@@ -205,4 +212,5 @@ export const intensity = {
     vaniglia,
     frostedCaramelNuts,
     seasonalDelightSpices,
+    tokyoVivaltoLungo
 };

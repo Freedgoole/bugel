@@ -28,6 +28,7 @@ import {Price} from "./component/Price";
 import {useEffect, useState} from "react";
 import {SideBar} from "./component/sideBar";
 import {CardGood} from "./component/Card";
+import {goods} from "./catalog/goods";
 
 function App() {
   const [isOpenSideBar, setOpenSideBar] = useState(false);
@@ -57,7 +58,7 @@ function App() {
         <div style={{width: '100%', display: 'flex', gap: "12px", flexWrap: "wrap", justifyContent: "start", marginTop: '24px'}}>
           <CentralContainer>
             <GoodsContainer>
-              <CardGood />
+              {goods.map(good => (<CardGood card={good} />))}
             </GoodsContainer>
           </CentralContainer>
         </div>

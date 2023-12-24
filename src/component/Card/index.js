@@ -57,13 +57,13 @@ const BorderBlock = styled.span`
 `
 
 const CardDescription = styled(Description)`
-  margin: 8px 0;
+  margin: 12px 0;
   flex: 1;
 `
 
 const CoffeParamsContainer = styled(FlexContainerCentred)`
   width: 100%;
-  gap: 4px;
+  gap: 8px;
   margin-bottom: 4px;
 `
 
@@ -79,20 +79,21 @@ const NotesContainer = styled.div`
 //   right: 10px;
 // `
 
-const ImgComponent = () => {
+const ImgComponent = ({card = 'buenosAires'}) => {
+    console.log(card, intensity[card]?.intensity)
     return (
         <CardContainer>
             <NotesContainer>
                 <Label information={notes.smoky} isShort/>
             </NotesContainer>
-            <Img src={CapsulePreview['buenosAires']} />
-            <TitleL>{nameUkraine['buenosAires']}</TitleL>
+            <Img src={CapsulePreview[card]} />
+            <TitleL>{nameUkraine[card]}</TitleL>
             <BorderBlock/>
-            <TitleM>{nameOrigin['buenosAires']}</TitleM>
-            <CardDescription>{shortDescription['buenosAires']}</CardDescription>
+            <TitleM>{nameOrigin[card]}</TitleM>
+            <CardDescription>{shortDescription[card]}</CardDescription>
             <CoffeParamsContainer>
                 <TitleS color="#876c43">{translate['intensity']}</TitleS>
-                <Rating rate={intensity['buenosAires'].intensity}/>
+                <Rating rate={intensity[card].intensity}/>
             </CoffeParamsContainer>
             <Price price='320'/>
             <ExstraInformation>1 упаковка (10 капсул)*</ExstraInformation>

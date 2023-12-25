@@ -108,5 +108,32 @@ const cocoa = {
     svg: CocoaSVG,
     tr: 'кокао'
 }
+export const СapsuleNotes = {
+    buenosAires: ['cereal', 'caramel'],
+    shanghaiLungo: [],
+    viennaLungo: ['cereal', 'malted'],
+    tokyoVivaltoLungo: ['roster', 'floral', 'flavoured'],
+    stockholmLungo: ['roster', 'malted'],
+    capetownEnvivoLungo: ['roster', 'woody', 'caramel'],
+    parisEspresso: ['biscuity', 'cereal'],
+    istanbulEspresso: ['fruit', 'roster'],
+    rioDeJaneiroEspresso: ['spicy', 'cereal'],
+    capriccio: ['cereal', 'balanced'],
+    caramello: ['caramel', 'flavoured'],
+    chiaro:  ['balanced', 'caramel', 'biscuity', 'intense'],
+    cioccolatino: ['flavoured'],
+    colombia: [],
+    corto: ['intense', 'spicy'],
+    cosi: ['cereal', 'fruit'],
+    ethiopia: ['floral', 'fruit'],
+    indonesia: ['intense', 'woody'],
+    frostedCaramelNuts: ['flavoured', 'caramel'],
+    nicaragua: ['cereal'],
+    nocciola: ['flavoured', 'biscuity', 'hazelnut'] ,
+    peruOrganic: ['fruit', 'toastedCereal'],
+    scuro: ['roster', 'balanced'],
+    seasonalDelightSpices: ['flavoured'],
+    vaniglia: ['flavoured', 'vanilla'],
+};
 
 export default {cocoa, boldRoastedNotes, fruit, flavoured, caramel, cereal, woody, coconut, roster, hazelnut, biscuity, vanilla, intense, balanced, floral, smoky, malted, spicy, toastedCereal};

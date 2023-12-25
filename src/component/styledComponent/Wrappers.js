@@ -23,6 +23,7 @@ export const GoodsContainer = styled.div`
   flex-wrap: wrap;
   gap: 14px;
   justify-content: center;
+  background-color: #faf9f8;
   
 
   @media (max-width: 767px) {

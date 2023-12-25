@@ -1,7 +1,7 @@
 import {memo} from "react";
 import styled from "styled-components";
 import {Label} from "../Label";
-import notes from "../../catalog/notes";
+import notes, {СapsuleNotes} from "../../catalog/notes";
 import {Img} from "../CardImg";
 import {CapsulePreview} from "../../images";
 import {Description, TitleL, TitleM, TitleS, TitleXS} from "../styledComponent/Typography";
@@ -12,6 +12,7 @@ import {intensity, translate} from "../../catalog/intensity";
 import {Rating} from "../Rating";
 import {Price} from "../Price";
 import {Button} from "../styledComponent/Button";
+import {cardImgAlt, cardImgTitle} from "../../catalog/cardImgAlt";
 
 const CardContainer = styled.div`
     position: relative;
@@ -24,6 +25,7 @@ const CardContainer = styled.div`
     align-items: center;
     flex-direction: column;
     box-sizing: border-box;
+    background-color: white;
 
     @media (max-width: 767px) {
       grid-template-columns: 1fr;
@@ -66,6 +68,8 @@ const NotesContainer = styled.div`
   position: absolute;
   top: 10px;
   right: 10px;
+  display: flex;
+  flex-direction: column;
 `
 
 // const CardContainer = styled.div`
@@ -75,13 +79,12 @@ const NotesContainer = styled.div`
 // `
 
 const ImgComponent = ({card = 'buenosAires'}) => {
-    console.log(card, intensity[card]?.intensity)
     return (
         <CardContainer>
             <NotesContainer>
-                <Label information={notes.smoky} isShort/>
+                {СapsuleNotes[card].map(note => (<Label information={notes[note]} isShort/>))}
             </NotesContainer>
-            <Img src={CapsulePreview[card]} />
+            <Img src={CapsulePreview[card]} alt={cardImgAlt[card]} title={cardImgTitle[card]}/>
             <TitleL>{nameUkraine[card]}</TitleL>
             <BorderBlock/>
             <TitleM>{nameOrigin[card]}</TitleM>

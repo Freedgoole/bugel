@@ -20,7 +20,7 @@ const Loader = styled.div`
   transform: translate(-50%, -50%);
 `;
 
-const ImgComponent = ({src, alt}) => {
+const ImgComponent = ({src, alt, title}) => {
     const [isLoad, setIsLoad] = useState(false);
 
     const handleLoad = () => {
@@ -31,7 +31,7 @@ const ImgComponent = ({src, alt}) => {
     return (
         <div style={{width: 160, height: 160, position: 'relative'}}>
             {!isLoad && <Loader />}
-            <img src={preparedSrc} alt={alt} width={160} onLoad={handleLoad} />
+            <img src={preparedSrc} alt={alt} width={160} onLoad={handleLoad} title={title} loading="lazy"/>
         </div>
     )
 };

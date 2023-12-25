@@ -29,7 +29,7 @@ const Text = styled.p`
 const LabelComponent = ({information, isShort}) => {
     const {svg, tr, ml} = information;
     const sizeOfCup = ml ? `(${ml + 'ml'})` : '';
-
+    console.log('information', information)
     return (
         <LabelWrapper isShort={isShort}>
             <Img src={svg} />

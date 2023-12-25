@@ -24,12 +24,28 @@ const Center = styled.div`
   cursor: pointer;
 `;
 
+const LinkScroll = styled.div`
+  @media (max-width: 425px) {
+    display: none;
+  }
+`;
+
+const FollowSection = styled.div`
+  @media (max-width: 425px) {
+    display: none;
+  }
+`;
+
+
+
 const FooterComponent = ({src, alt}) => {
 
     return (
         <Wrapper>
-            <FlexContainerCentredEnd>Слідкувати за нами: </FlexContainerCentredEnd>
-            <Center>До верху сторінки</Center>
+            <FlexContainerCentredEnd>
+                <FollowSection>Слідкувати за нами: </FollowSection>
+            </FlexContainerCentredEnd>
+            <Center><LinkScroll>До верху сторінки</LinkScroll></Center>
             <FlexContainerCentredEnd><img src={Logo} height={20} alt=""/></FlexContainerCentredEnd>
         </Wrapper>
     )

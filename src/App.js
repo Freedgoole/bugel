@@ -31,6 +31,8 @@ import {CardGood} from "./component/Card";
 import {goods} from "./catalog/goods";
 import useBodyOverflow from "./component/hooks/hiddenScroll";
 import {Header} from "./component/Header";
+import {SectionPreview} from "./component/styledComponent/Section";
+import {Sections} from "./catalog/section";
 
 function App() {
   const [isOpenSideBar, setOpenSideBar] = useState(false);
@@ -40,7 +42,7 @@ function App() {
   }
 
   useBodyOverflow(isOpenSideBar)
-
+  console.log('sss', `url(${Sections['worldExploration'].img})`)
   return (
     <div className="App">
       <Header/>
@@ -80,6 +82,14 @@ function App() {
           {Object.values(sizeOfCaup).map((note) => (
               <Label information={note} isShort/>
           ))}
+        </div>
+        <div style={{width: '100%', display: 'flex', gap: "12px", flexWrap: "wrap", justifyContent: "start", marginTop: '24px'}}>
+          <SectionPreview style={{backgroundImage: `url(images/HomeSection/${Sections["worldExploration"].img})`}} >
+              <SectionTitle>Дослідження світу</SectionTitle>
+              <SectionDescription>
+                Подорожуйте світом завдяки каві та відкривайте унікальні та типові смаки, які привозяться до вас з міст по всьому світу
+              </SectionDescription>
+          </SectionPreview>
         </div>
         <div style={{width: '100%', display: 'flex', gap: "12px", flexWrap: "wrap", justifyContent: "start", marginTop: '24px'}}>
           {Object.values(sizeOfCaup).map((note) => (

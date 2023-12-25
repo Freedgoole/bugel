@@ -16,7 +16,7 @@ import {
   SectionTitle,
   TitleL,
   TitleM,
-  TitleS, TitleXS
+  TitleS
 } from "./component/styledComponent/Typography";
 import {Rating} from "./component/Rating";
 import {intensity, translate} from "./catalog/intensity";
@@ -29,6 +29,8 @@ import {useEffect, useState} from "react";
 import {SideBar} from "./component/sideBar";
 import {CardGood} from "./component/Card";
 import {goods} from "./catalog/goods";
+import useBodyOverflow from "./component/hooks/hiddenScroll";
+import {Header} from "./component/Header";
 
 function App() {
   const [isOpenSideBar, setOpenSideBar] = useState(false);
@@ -37,16 +39,11 @@ function App() {
     setOpenSideBar(!isOpenSideBar);
   }
 
-  useEffect(() => {
-    if (isOpenSideBar) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-  }, [isOpenSideBar]);
+  useBodyOverflow(isOpenSideBar)
 
   return (
     <div className="App">
+      <Header/>
       <header className="App-header">
         <SideBar isOpenSideBar={isOpenSideBar} onClose={toggleOpenSideBar}/>
         Aromatic profile :

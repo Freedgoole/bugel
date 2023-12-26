@@ -25,13 +25,13 @@ import {Badge} from "./component/styledComponent/Badge";
 import {Button} from "./component/styledComponent/Button";
 import {Footer} from "./component/Footer";
 import {Price} from "./component/Price";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {SideBar} from "./component/sideBar";
 import {CardGood} from "./component/Card";
 import {goods} from "./catalog/goods";
 import useBodyOverflow from "./component/hooks/hiddenScroll";
 import {Header} from "./component/Header";
-import {SectionPreview} from "./component/styledComponent/Section";
+import {SectionGoodsWrapper, SectionPreview, SectionWrapper} from "./component/styledComponent/Section";
 import {Sections} from "./catalog/section";
 
 function App() {
@@ -84,12 +84,19 @@ function App() {
           ))}
         </div>
         <div style={{width: '100%', display: 'flex', gap: "12px", flexWrap: "wrap", justifyContent: "start", marginTop: '24px'}}>
-          <SectionPreview style={{backgroundImage: `url(images/HomeSection/${Sections["worldExploration"].img})`}} >
-              <SectionTitle>Дослідження світу</SectionTitle>
-              <SectionDescription>
-                Подорожуйте світом завдяки каві та відкривайте унікальні та типові смаки, які привозяться до вас з міст по всьому світу
-              </SectionDescription>
-          </SectionPreview>
+          <SectionWrapper>
+            <SectionPreview style={{backgroundImage: `url(images/HomeSection/${Sections["worldExploration"].img})`}} >
+                <SectionTitle>Дослідження світу</SectionTitle>
+                <SectionDescription>
+                  Подорожуйте світом завдяки каві та відкривайте унікальні та типові смаки, які привозяться до вас з міст по всьому світу
+                </SectionDescription>
+            </SectionPreview>
+            <SectionGoodsWrapper>
+              <CardGood/>
+              <CardGood/>
+              <CardGood/>
+            </SectionGoodsWrapper>
+          </SectionWrapper>
         </div>
         <div style={{width: '100%', display: 'flex', gap: "12px", flexWrap: "wrap", justifyContent: "start", marginTop: '24px'}}>
           {Object.values(sizeOfCaup).map((note) => (

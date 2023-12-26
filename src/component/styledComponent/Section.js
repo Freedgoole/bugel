@@ -1,12 +1,13 @@
 import styled from "styled-components";
-export const SectionPreview = styled.section`
+import {GoodsContainer} from "./Wrappers";
+export const SectionPreview = styled.div`
   width: 100%;
   height: 450px;
   background-color: black;
   color: ${(props) => props?.isWrite ? "white" : "black"};
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 8%;
+  padding: 90px 25px;
   box-sizing: border-box;
   
   &:after {
@@ -22,6 +23,23 @@ export const SectionPreview = styled.section`
   }
 
   @media (max-width: 425px) {
-    height: 170px;
+    padding: 35px 25px 0;
+    height: 200px;
   }
 `;
+
+export const SectionWrapper = styled.section`
+  width: 100%;
+`
+
+export const SectionGoodsWrapper = styled(GoodsContainer)`
+  width: 100%;
+  transform: translateY(-220px);
+  @media (max-width: 970px) {
+    transform: translateY(-80px);
+  }
+
+  @media (max-width: 425px) {
+    transform: translateY(-20px);
+  }
+`

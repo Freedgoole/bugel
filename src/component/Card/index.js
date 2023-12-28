@@ -13,6 +13,7 @@ import {Rating} from "../Rating";
 import {Price} from "../Price";
 import {Button} from "../styledComponent/Button";
 import {cardImgAlt, cardImgTitle} from "../../catalog/cardImgAlt";
+import {Tooltip} from "../Tooltip";
 
 const CardContainer = styled.div`
     position: relative;
@@ -72,17 +73,26 @@ const NotesContainer = styled.div`
   flex-direction: column;
 `
 
-// const CardContainer = styled.div`
-//   position: absolute;
-//   top: 10px;
-//   right: 10px;
-// `
+const TooltipNote = styled.div`
+  background: #faf9f8;
+  padding: 6px 12px;
+  font-size: 12px;
+  color: black;
+  border: 1px solid #E5D5BB;
+  border-radius: 20px;
+`
+
+
 
 const ImgComponent = ({card = 'buenosAires'}) => {
     return (
         <CardContainer>
             <NotesContainer>
-                {СapsuleNotes[card].map(note => (<Label information={notes[note]} isShort/>))}
+                {СapsuleNotes[card].map(note => (
+                    <Tooltip tooltip={<TooltipNote>{notes[note].tr}</TooltipNote>} isHover>
+                        <Label information={notes[note]} isShort/>
+                    </Tooltip>
+                ))}
             </NotesContainer>
             <Img src={CapsulePreview[card]} alt={cardImgAlt[card]} title={cardImgTitle[card]}/>
             <TitleL>{nameUkraine[card]}</TitleL>

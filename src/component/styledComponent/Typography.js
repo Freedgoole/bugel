@@ -18,7 +18,8 @@ export const SectionDescription = styled.p`
   font-size: 20px;
   color: #17171a;
   letter-spacing: 1.2px;
-  margin-top: 15px;
+  max-width: 900px;
+  margin: 15px auto 0;
 
   @media (max-width: 768px) {
     font-size: 16px;

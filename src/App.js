@@ -33,6 +33,7 @@ import useBodyOverflow from "./component/hooks/hiddenScroll";
 import {Header} from "./component/Header";
 import {SectionGoodsWrapper, SectionPreview, SectionWrapper} from "./component/styledComponent/Section";
 import {Sections} from "./catalog/section";
+import {Tooltip} from "./component/Tooltip";
 
 function App() {
   const [isOpenSideBar, setOpenSideBar] = useState(false);
@@ -42,7 +43,7 @@ function App() {
   }
 
   useBodyOverflow(isOpenSideBar)
-  console.log('sss', `url(${Sections['worldExploration'].img})`)
+
   return (
     <div className="App">
       <Header/>
@@ -119,6 +120,7 @@ function App() {
         <div style={{width: '100%', display: 'flex', gap: "12px", flexWrap: "wrap", justifyContent: "start", marginTop: '24px'}}>
           <Button>Додати у корзину</Button>
           <Button type='basket' onClick={toggleOpenSideBar}>Корзина</Button>
+          <Tooltip tooltip={<div style={{backgroundColor: "black", padding: 8, boxSizing: "border-box"}}>tooltip</div>} isHover><Button>Tooltip</Button></Tooltip>
         </div>
         <div style={{width: '100%', display: 'flex', gap: "12px", flexWrap: "wrap", justifyContent: "start", marginTop: '24px'}}>
           {Object.values(intensity).map((note) => (
